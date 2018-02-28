@@ -1,6 +1,5 @@
 package ssm.demo.dao;
 
-
 import ssm.demo.model.Teacher;
 
 public interface TeacherMapper {
