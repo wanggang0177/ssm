@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
@@ -29,8 +30,11 @@ public class ServiceImpl implements IService
 		return JSON.toJSONString(jsonList, SerializerFeature.WriteMapNullValue);
 	}
 	
+	@Transactional
 	public int insert(User record) {
-		return userMapper.insert(record);
+		userMapper.insert(record);
+		int i = 3 / 0;
+		return i;
 	}
 
 	public int deleteByPrimaryKey(Integer id) {

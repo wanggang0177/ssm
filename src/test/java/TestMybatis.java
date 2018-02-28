@@ -22,13 +22,13 @@ public class TestMybatis {
 	@Autowired  
     private IService service;  
   
-//	@Test
-//	public void insertTest(){
-//		User u = new User();
-//		u.setName("xxx");
-//		u.setAge(24);
-//		service.insert(u);
-//	}
+	@Test
+	public void insertTest(){
+		User u = new User();
+		u.setName("xxx");
+		u.setAge(24);
+		service.insert(u);
+	}
 	
 //	@Test
 //	public void deleteTest(){
